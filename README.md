@@ -1,28 +1,69 @@
-# Create T3 App
+# FIFA Tournament Draft
 
-This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3-app`.
+This is a web application developed using Next.js and TypeScript. It's designed to manage and host FIFA23 Draft Tournaments.
 
-## What's next? How do I make an app with this?
+## Getting Started
 
-We try to keep this project as simple as possible, so you can start with just the scaffolding we set up for you, and add additional things later when they become necessary.
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-If you are not familiar with the different technologies used in this project, please refer to the respective docs. If you still are in the wind, please join our [Discord](https://t3.gg/discord) and ask for help.
+### Prerequisites
 
-- [Next.js](https://nextjs.org)
-- [NextAuth.js](https://next-auth.js.org)
-- [Prisma](https://prisma.io)
-- [Tailwind CSS](https://tailwindcss.com)
-- [tRPC](https://trpc.io)
+Make sure you have the latest versions of Node and npm installed. You can verify by running:
 
-## Learn More
+```
+node -v
+npm -v
+```
 
-To learn more about the [T3 Stack](https://create.t3.gg/), take a look at the following resources:
+### Installation
 
-- [Documentation](https://create.t3.gg/)
-- [Learn the T3 Stack](https://create.t3.gg/en/faq#what-learning-resources-are-currently-available) — Check out these awesome tutorials
+Clone the repository:
 
-You can check out the [create-t3-app GitHub repository](https://github.com/t3-oss/create-t3-app) — your feedback and contributions are welcome!
+```
+git clone git@github.com:altarrok/fifa-tournament-draft.git
+cd fifa-tournament-draft
+```
 
-## How do I deploy this?
+Install the dependencies:
 
-Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/vercel), [Netlify](https://create.t3.gg/en/deployment/netlify) and [Docker](https://create.t3.gg/en/deployment/docker) for more information.
+```
+npm install
+```
+
+Run the application in the development mode:
+
+```
+npm run dev
+```
+
+Now open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+## CSV Upload
+
+To upload player data, you need a CSV file specifically formatted with the following headers:
+
+- picture (string)
+- Flag (string)
+- Name (string)
+- Age (number)
+- Position (enum)
+- Overall (number)
+- Team_Image (string)
+- Team (string)
+
+Please ensure that the CSV is correctly formatted to prevent any upload errors.
+
+## Available Scripts
+
+- `build`: Builds the application for production usage
+- `dev`: Runs the application in the development mode
+- `lint`: Runs the linter to check code quality
+- `start`: Starts the application in production mode
+
+## Built With
+
+- [TypeScript](https://www.typescriptlang.org/)
+- [Next.js](https://nextjs.org/)
+- [React](https://reactjs.org/)
+- [React Table](https://tanstack.com/react-table/)
+- [Zod](https://www.npmjs.com/package/zod)
