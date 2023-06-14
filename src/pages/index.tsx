@@ -8,7 +8,6 @@ const Home: NextPage = () => {
   return (
     <DraftContextProvider>
       <DraftController />
-      <Pitch formation={formationOptions[1]!} onEmptyPositionClick={() => {}} />
     </DraftContextProvider>
   );
 };
