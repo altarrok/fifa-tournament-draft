@@ -1,0 +1,9 @@
+0. db update
+1. Pick number of players
+2. One by one (formation picking) (until everyone picked a formation):
+    1. Random formations sampled from formation pool
+    2. Player picks a formation from given random samples
+3. One by one (Athlete picking) (until all positions are filled):
+    1. Player chooses which position to pick an athlete for
+    2. Random athletes sampled from athlete pool
+    3. Player picks an athlete from given random samples
