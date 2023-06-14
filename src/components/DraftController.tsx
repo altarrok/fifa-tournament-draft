@@ -9,11 +9,8 @@ import { DraftViewer } from "./DraftViewer";
 export const DraftController: React.FC = () => {
     const { stage } = useContext(DraftContext);
 
-    
-
     return (
         <>
-            <h3 className="text-3xl font-bold">Player: {stage.user + 1}</h3>
             {
                 (() => {
                     switch (stage.name) {
@@ -22,9 +19,21 @@ export const DraftController: React.FC = () => {
                         case "USER_COUNT_PICK":
                             return <UserCountPicker />;
                         case "FORMATION_PICK":
-                            return <FormationPickWidget />;
+                            return (
+                                <>
+                                    <h3 className="text-3xl font-bold">Player: {stage.user + 1}</h3>
+                                    <FormationPickWidget />
+                                </>
+                            );
                         case "PLAYER_PICK":
-                            return  <PlayerPickWidget />;
+                            return (
+                                <>
+                                    <h3 className="text-3xl font-bold">Player: {stage.user + 1}</h3>
+                                    <PlayerPickWidget />
+                                </>
+                            );
+                        case "DISPLAY":
+                            return <></>;
                     }
                 })()
             }

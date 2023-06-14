@@ -44,8 +44,6 @@ export const PlayerPickWidget: React.FC = () => {
                                 const newFormations = [...formations];
                                 newFormations.splice(stage.user, 1, userFormation);
 
-                                console.log(newFormations);
-                                
                                 return {
                                     ...prevCtx,
                                     database: prevCtx.database.filter(player => player.id !== chosenPlayer.id),
@@ -57,8 +55,7 @@ export const PlayerPickWidget: React.FC = () => {
                                             name: "PLAYER_PICK",
                                             user: 0,
                                         } : {
-                                            // name: "DISPLAY",
-                                            name: "PLAYER_PICK",
+                                            name: "DISPLAY",
                                             user: 0,
                                         }
                                     ) : {
