@@ -53,6 +53,8 @@ To upload player data, you need a CSV file specifically formatted with the follo
 
 Please ensure that the CSV is correctly formatted to prevent any upload errors.
 
+You may find players from platforms such as SoFIFA
+
 ## Available Scripts
 
 - `build`: Builds the application for production usage
