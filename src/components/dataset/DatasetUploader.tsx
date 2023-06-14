@@ -37,7 +37,7 @@ export const DatasetUploader: React.FC = () => {
                   header: true,
                   skipEmptyLines: true,
                   complete: function (results) {
-                    const parsedData = results.data.map((dataRow, i) => ({ ...ZPlayer.parse(dataRow), id: i })).slice(0, 300);
+                    const parsedData = results.data.map((dataRow, i) => ({ ...ZPlayer.parse(dataRow), id: i }));
                     
                     setDraftContext((prevState) => ({ 
                       ...prevState, 

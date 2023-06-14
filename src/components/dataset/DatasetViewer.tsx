@@ -46,8 +46,6 @@ export const DatasetViewer: React.FC = () => {
         getCoreRowModel: getCoreRowModel(),
     })
     
-  console.log(database);
-
     return (
         <div className="w-full">
             <div className="relative overflow-x-auto shadow-md rounded-lg mt-2">

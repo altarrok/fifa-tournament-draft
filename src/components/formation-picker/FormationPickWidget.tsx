@@ -4,117 +4,348 @@ import { FormationPicker, TFormation } from "./FormationPicker";
 import { EPlayerPosition } from "../PlayerPicker";
 import { DraftContext } from "~/draft-context/DraftContext";
 
-const formationOptions: TFormation[] = [
+export const formationOptions: TFormation[] = [
     {
         name: "3-1-4-2",
         playerPositions: [
-            { position: EPlayerPosition.ST },
-            { position: EPlayerPosition.ST },
-            { position: EPlayerPosition.LM },
-            { position: EPlayerPosition.CM },
-            { position: EPlayerPosition.CDM },
-            { position: EPlayerPosition.CM },
-            { position: EPlayerPosition.RM },
-            { position: EPlayerPosition.CB },
-            { position: EPlayerPosition.CB },
-            { position: EPlayerPosition.CB },
-            { position: EPlayerPosition.GK },
+            {
+                position: EPlayerPosition.ST,
+                pitchOffset: [175, 120],
+            },
+            {
+                position: EPlayerPosition.ST,
+                pitchOffset: [275, 120],
+            },
+            {
+                position: EPlayerPosition.LM,
+                pitchOffset: [75, 275],
+            },
+            {
+                position: EPlayerPosition.CM,
+                pitchOffset: [150, 340],
+            },
+            {
+                position: EPlayerPosition.CDM,
+                pitchOffset: [225, 375],
+            },
+            {
+                position: EPlayerPosition.CM,
+                pitchOffset: [300, 340],
+            },
+            {
+                position: EPlayerPosition.RM,
+                pitchOffset: [375, 275],
+            },
+            {
+                position: EPlayerPosition.CB,
+                pitchOffset: [100, 525],
+            },
+            {
+                position: EPlayerPosition.CB,
+                pitchOffset: [225, 510],
+            },
+            {
+                position: EPlayerPosition.CB,
+                pitchOffset: [350, 525],
+            },
+            {
+                position: EPlayerPosition.GK,
+                pitchOffset: [225, 645],
+            },
         ],
     },
     {
         name: "3-4-1-2",
         playerPositions: [
-            { position: EPlayerPosition.ST },
-            { position: EPlayerPosition.ST },
-            { position: EPlayerPosition.CAM },
-            { position: EPlayerPosition.LM },
-            { position: EPlayerPosition.CM },
-            { position: EPlayerPosition.CM },
-            { position: EPlayerPosition.RM },
-            { position: EPlayerPosition.CB },
-            { position: EPlayerPosition.CB },
-            { position: EPlayerPosition.CB },
-            { position: EPlayerPosition.GK },
+            {
+                position: EPlayerPosition.ST,
+                pitchOffset: [175, 120],
+            },
+            {
+                position: EPlayerPosition.ST,
+                pitchOffset: [275, 120],
+            },
+            {
+                position: EPlayerPosition.CAM,
+                pitchOffset: [225, 225],
+            },
+            {
+                position: EPlayerPosition.LM,
+                pitchOffset: [75, 275],
+            },
+            {
+                position: EPlayerPosition.CM,
+                pitchOffset: [150, 340],
+            },
+            {
+                position: EPlayerPosition.CM,
+                pitchOffset: [300, 340],
+            },
+            {
+                position: EPlayerPosition.RM,
+                pitchOffset: [375, 275],
+            },
+            {
+                position: EPlayerPosition.CB,
+                pitchOffset: [100, 525],
+            },
+            {
+                position: EPlayerPosition.CB,
+                pitchOffset: [225, 510],
+            },
+            {
+                position: EPlayerPosition.CB,
+                pitchOffset: [350, 525],
+            },
+            {
+                position: EPlayerPosition.GK,
+                pitchOffset: [225, 645],
+            },
         ],
     },
     {
         name: "3-4-2-1",
         playerPositions: [
-            { position: EPlayerPosition.ST },
-            { position: EPlayerPosition.CF },
-            { position: EPlayerPosition.CF },
-            { position: EPlayerPosition.LM },
-            { position: EPlayerPosition.CM },
-            { position: EPlayerPosition.CM },
-            { position: EPlayerPosition.RM },
-            { position: EPlayerPosition.CB },
-            { position: EPlayerPosition.CB },
-            { position: EPlayerPosition.CB },
-            { position: EPlayerPosition.GK },
+            {
+                position: EPlayerPosition.ST,
+                pitchOffset: [0, 0],
+            },
+            {
+                position: EPlayerPosition.CF,
+                pitchOffset: [0, 0],
+            },
+            {
+                position: EPlayerPosition.CF,
+                pitchOffset: [0, 0],
+            },
+            {
+                position: EPlayerPosition.LM,
+                pitchOffset: [0, 0],
+            },
+            {
+                position: EPlayerPosition.CM,
+                pitchOffset: [0, 0],
+            },
+            {
+                position: EPlayerPosition.CM,
+                pitchOffset: [0, 0],
+            },
+            {
+                position: EPlayerPosition.RM,
+                pitchOffset: [0, 0],
+            },
+            {
+                position: EPlayerPosition.CB,
+                pitchOffset: [0, 0],
+            },
+            {
+                position: EPlayerPosition.CB,
+                pitchOffset: [0, 0],
+            },
+            {
+                position: EPlayerPosition.CB,
+                pitchOffset: [0, 0],
+            },
+            {
+                position: EPlayerPosition.GK,
+                pitchOffset: [0, 0],
+            },
         ],
     },
     {
         name: "3-4-3 Diamond",
         playerPositions: [
-            { position: EPlayerPosition.ST },
-            { position: EPlayerPosition.LW },
-            { position: EPlayerPosition.RW },
-            { position: EPlayerPosition.CAM },
-            { position: EPlayerPosition.LM },
-            { position: EPlayerPosition.CDM },
-            { position: EPlayerPosition.RM },
-            { position: EPlayerPosition.CB },
-            { position: EPlayerPosition.CB },
-            { position: EPlayerPosition.CB },
-            { position: EPlayerPosition.GK },
+            {
+                position: EPlayerPosition.ST,
+                pitchOffset: [0, 0]
+            },
+            {
+                position: EPlayerPosition.LW,
+                pitchOffset: [0, 0]
+            },
+            {
+                position: EPlayerPosition.RW,
+                pitchOffset: [0, 0]
+            },
+            {
+                position: EPlayerPosition.CAM,
+                pitchOffset: [0, 0]
+            },
+            {
+                position: EPlayerPosition.LM,
+                pitchOffset: [0, 0]
+            },
+            {
+                position: EPlayerPosition.CDM,
+                pitchOffset: [0, 0]
+            },
+            {
+                position: EPlayerPosition.RM,
+                pitchOffset: [0, 0]
+            },
+            {
+                position: EPlayerPosition.CB,
+                pitchOffset: [0, 0]
+            },
+            {
+                position: EPlayerPosition.CB,
+                pitchOffset: [0, 0]
+            },
+            {
+                position: EPlayerPosition.CB,
+                pitchOffset: [0, 0]
+            },
+            {
+                position: EPlayerPosition.GK,
+                pitchOffset: [0, 0]
+            },
         ],
     },
     {
         name: "3-4-3 Flat",
         playerPositions: [
-            { position: EPlayerPosition.LW },
-            { position: EPlayerPosition.ST },
-            { position: EPlayerPosition.RW },
-            { position: EPlayerPosition.LM },
-            { position: EPlayerPosition.CM },
-            { position: EPlayerPosition.CM },
-            { position: EPlayerPosition.RM },
-            { position: EPlayerPosition.CB },
-            { position: EPlayerPosition.CB },
-            { position: EPlayerPosition.CB },
-            { position: EPlayerPosition.GK },
+            {
+                position: EPlayerPosition.LW,
+                pitchOffset: [0, 0]
+            },
+            {
+                position: EPlayerPosition.ST,
+                pitchOffset: [0, 0]
+            },
+            {
+                position: EPlayerPosition.RW,
+                pitchOffset: [0, 0]
+            },
+            {
+                position: EPlayerPosition.LM,
+                pitchOffset: [0, 0]
+            },
+            {
+                position: EPlayerPosition.CM,
+                pitchOffset: [0, 0]
+            },
+            {
+                position: EPlayerPosition.CM,
+                pitchOffset: [0, 0]
+            },
+            {
+                position: EPlayerPosition.RM,
+                pitchOffset: [0, 0]
+            },
+            {
+                position: EPlayerPosition.CB,
+                pitchOffset: [0, 0]
+            },
+            {
+                position: EPlayerPosition.CB,
+                pitchOffset: [0, 0]
+            },
+            {
+                position: EPlayerPosition.CB,
+                pitchOffset: [0, 0]
+            },
+            {
+                position: EPlayerPosition.GK,
+                pitchOffset: [0, 0]
+            },
         ],
     },
     {
         name: "3-5-1-1",
         playerPositions: [
-            { position: EPlayerPosition.ST },
-            { position: EPlayerPosition.CF },
-            { position: EPlayerPosition.LM },
-            { position: EPlayerPosition.CDM },
-            { position: EPlayerPosition.CM },
-            { position: EPlayerPosition.CDM },
-            { position: EPlayerPosition.RM },
-            { position: EPlayerPosition.CB },
-            { position: EPlayerPosition.CB },
-            { position: EPlayerPosition.CB },
-            { position: EPlayerPosition.GK },
+            {
+                position: EPlayerPosition.ST,
+                pitchOffset: [0, 0],
+            },
+            {
+                position: EPlayerPosition.CF,
+                pitchOffset: [0, 0],
+            },
+            {
+                position: EPlayerPosition.LM,
+                pitchOffset: [0, 0],
+            },
+            {
+                position: EPlayerPosition.CDM,
+                pitchOffset: [0, 0],
+            },
+            {
+                position: EPlayerPosition.CM,
+                pitchOffset: [0, 0],
+            },
+            {
+                position: EPlayerPosition.CDM,
+                pitchOffset: [0, 0],
+            },
+            {
+                position: EPlayerPosition.RM,
+                pitchOffset: [0, 0],
+            },
+            {
+                position: EPlayerPosition.CB,
+                pitchOffset: [0, 0],
+            },
+            {
+                position: EPlayerPosition.CB,
+                pitchOffset: [0, 0],
+            },
+            {
+                position: EPlayerPosition.CB,
+                pitchOffset: [0, 0],
+            },
+            {
+                position: EPlayerPosition.GK,
+                pitchOffset: [0, 0],
+            },
         ],
     },
     {
         name: "3-5-2",
         playerPositions: [
-            { position: EPlayerPosition.ST },
-            { position: EPlayerPosition.ST },
-            { position: EPlayerPosition.CAM },
-            { position: EPlayerPosition.LM },
-            { position: EPlayerPosition.CDM },
-            { position: EPlayerPosition.CDM },
-            { position: EPlayerPosition.RM },
-            { position: EPlayerPosition.CB },
-            { position: EPlayerPosition.CB },
-            { position: EPlayerPosition.CB },
-            { position: EPlayerPosition.GK },
+            {
+                position: EPlayerPosition.ST,
+                pitchOffset: [0, 0],
+            },
+            {
+                position: EPlayerPosition.ST,
+                pitchOffset: [0, 0],
+            },
+            {
+                position: EPlayerPosition.CAM,
+                pitchOffset: [0, 0],
+            },
+            {
+                position: EPlayerPosition.LM,
+                pitchOffset: [0, 0],
+            },
+            {
+                position: EPlayerPosition.CDM,
+                pitchOffset: [0, 0],
+            },
+            {
+                position: EPlayerPosition.CDM,
+                pitchOffset: [0, 0],
+            },
+            {
+                position: EPlayerPosition.RM,
+                pitchOffset: [0, 0],
+            },
+            {
+                position: EPlayerPosition.CB,
+                pitchOffset: [0, 0],
+            },
+            {
+                position: EPlayerPosition.CB,
+                pitchOffset: [0, 0],
+            },
+            {
+                position: EPlayerPosition.CB,
+                pitchOffset: [0, 0],
+            },
+            {
+                position: EPlayerPosition.GK,
+                pitchOffset: [0, 0],
+            },
         ],
     },
     // {
@@ -221,22 +452,22 @@ const formationOptions: TFormation[] = [
     //     name: "5-4-1 Diamond",
     //     playerPositions: [],
     // },
-    {
-        name: "5-4-1 Flat",
-        playerPositions: [
-            { position: EPlayerPosition.ST },
-            { position: EPlayerPosition.LM },
-            { position: EPlayerPosition.CM },
-            { position: EPlayerPosition.CM },
-            { position: EPlayerPosition.RM },
-            { position: EPlayerPosition.LWB },
-            { position: EPlayerPosition.CB },
-            { position: EPlayerPosition.CB },
-            { position: EPlayerPosition.CB },
-            { position: EPlayerPosition.RWB },
-            { position: EPlayerPosition.GK },
-        ],
-    },
+    // {
+    //     name: "5-4-1 Flat",
+    //     playerPositions: [
+    //         { position: EPlayerPosition.ST },
+    //         { position: EPlayerPosition.LM },
+    //         { position: EPlayerPosition.CM },
+    //         { position: EPlayerPosition.CM },
+    //         { position: EPlayerPosition.RM },
+    //         { position: EPlayerPosition.LWB },
+    //         { position: EPlayerPosition.CB },
+    //         { position: EPlayerPosition.CB },
+    //         { position: EPlayerPosition.CB },
+    //         { position: EPlayerPosition.RWB },
+    //         { position: EPlayerPosition.GK },
+    //     ],
+    // },
 ];
 
 

@@ -1,4 +1,5 @@
 import { TPlayer } from "./dataset/DatasetUploader";
+import { PlayerCard } from "./pitch/PlayerCard";
 
 export enum EPlayerPosition {
     GK = "GK",
@@ -23,6 +24,7 @@ export enum EPlayerPosition {
 export type TPlayerPosition = {
     position: EPlayerPosition,
     player?: TPlayer,
+    pitchOffset: [number, number]
 }
 
 export const PlayerPicker: React.FC<{
@@ -30,19 +32,19 @@ export const PlayerPicker: React.FC<{
     players: TPlayer[],
     onChoose: (player: TPlayer) => void,
 }> = ({ position, players, onChoose }) => {
+
     return (
         <div>
             <h3 className="text-3xl font-bold">{position}</h3>
             <div className="flex flex-row items-center gap-2">
                 {
                     players.map((player, i) => (
-                        <button
-                            className="py-2 px-3 border border-solid border-black rounded-md"
+                        <PlayerCard 
                             key={i}
+                            position={position}
+                            player={player}
                             onClick={() => onChoose(player)}
-                        >
-                            {player.Name} | {player.Overall} | {player.Position}
-                        </button>
+                        />
                     ))
                 }
             </div>
