@@ -5,6 +5,7 @@ import { TPlayer } from "./dataset/DatasetUploader";
 import { randomNItemSampler } from "~/util/randomItemSampler";
 import Modal from 'react-modal';
 import { Pitch } from "./pitch/Pitch";
+import { randomNWeightedPlayerSampler } from "~/util/weightedRandomPlayerSampler";
 
 { process.env.NODE_ENV !== 'test' ? Modal.setAppElement("#__next") : Modal.setAppElement("body") }
 
@@ -15,7 +16,7 @@ export const PlayerPickWidget: React.FC = () => {
 
     useEffect(() => {
         if (selectedPosition !== undefined && database.length) {            
-            setRandomPlayers(randomNItemSampler<TPlayer>(database.filter(player => player.Position === formations[stage.user]!.playerPositions[selectedPosition]!.position).slice(0, 20), 5))
+            setRandomPlayers(randomNWeightedPlayerSampler(database.filter(player => player.Position === formations[stage.user]!.playerPositions[selectedPosition]!.position).slice(0, 20), 5))
         }
     }, [selectedPosition]);
 

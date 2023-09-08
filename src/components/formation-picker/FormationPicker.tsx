@@ -1,4 +1,4 @@
-import { EPlayerPosition, TPlayerPosition } from "../PlayerPicker";
+import { TPlayerPosition } from "../PlayerPicker";
 
 export type TFormation = {
     name: string,
